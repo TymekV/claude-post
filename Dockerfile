@@ -40,6 +40,8 @@ WORKDIR /app
 COPY --chown=appuser:appgroup --from=uv /app/.venv /app/.venv
 COPY --chown=appuser:appgroup --from=uv /app /app
 
+RUN touch /app/email_client.log && chown appuser:appgroup /app/email_client.log
+
 # Set environment
 ENV PATH="/app/.venv/bin:$PATH"
 ENV PYTHONPATH=/app

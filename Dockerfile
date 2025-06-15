@@ -47,4 +47,4 @@ ENV PYTHONPATH=/app
 # Switch to non-root user
 USER appuser:appgroup
 
-ENTRYPOINT ["email_client"]
+ENTRYPOINT ["email-client"]
